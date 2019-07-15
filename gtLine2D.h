@@ -24,5 +24,9 @@ struct gtLine2D_t
 
 DLL_GEOTOOLS struct gtLine2D_t gtLine2D_make_line(const struct gtPoint2D_t *point, const struct gtVec2D_t *direction);
 
+DLL_GEOTOOLS struct gtLine2D_t gtLine2D_make_between_2_points(const struct gtPoint2D_t *p1, const struct gtPoint2D_t *p2);
+
+DLL_GEOTOOLS struct gtLine2D_t gtLine2D_copy(const struct gtLine2D_t *line);
+
 
 #endif /* gtLine2D_h */

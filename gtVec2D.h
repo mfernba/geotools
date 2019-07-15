@@ -23,6 +23,8 @@ DLL_GEOTOOLS struct gtVec2D_t gtVec2D_make(double Ux, double Uy);
 
 DLL_GEOTOOLS struct gtVec2D_t gtVec2D_make_betweem_two_points(const struct gtPoint2D_t *p1, const struct gtPoint2D_t *p2);
 
+DLL_GEOTOOLS struct gtVec2D_t gtVec2D_make_director_vector(const struct gtPoint2D_t *p1, const struct gtPoint2D_t *p2);
+
 DLL_GEOTOOLS struct gtVec2D_t gtVec2D_copy(const struct gtVec2D_t *vector);
 
 DLL_GEOTOOLS double gtVec2D_length(const struct gtVec2D_t *vector);

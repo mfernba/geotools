@@ -29,13 +29,8 @@ struct gtPoint2D_t gtPoint2D_make(double x, double y)
 
 struct gtPoint2D_t gtPoint2D_copy(const struct gtPoint2D_t *p)
 {
-    struct gtPoint2D_t other_p;
-    
     assert(p != NULL);
-    
-    other_p = *p;
-    
-    return other_p;
+    return *p;
 }
 
 // ------------------------------------------------------------------------------------------

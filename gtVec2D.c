@@ -43,15 +43,22 @@ struct gtVec2D_t gtVec2D_make_betweem_two_points(const struct gtPoint2D_t *p1, c
 
 // ------------------------------------------------------------------------------------------
 
+struct gtVec2D_t gtVec2D_make_director_vector(const struct gtPoint2D_t *p1, const struct gtPoint2D_t *p2)
+{
+    struct gtVec2D_t vec;
+    
+    vec = gtVec2D_make_betweem_two_points(p1, p2);
+    gtVec2D_make_unit(&vec);
+    
+    return vec;
+}
+
+// ------------------------------------------------------------------------------------------
+
 struct gtVec2D_t gtVec2D_copy(const struct gtVec2D_t *vector)
 {
-    struct gtVec2D_t other_vector;
-    
     assert(vector != NULL);
-    
-    other_vector = *vector;
-    
-    return other_vector;
+    return *vector;
 }
 
 // ------------------------------------------------------------------------------------------
