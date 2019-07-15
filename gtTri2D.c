@@ -31,6 +31,7 @@ struct gtTri2D_t gtTri2D_make(const struct gtPoint2D_t *p0, const struct gtPoint
 double gtTri2D_area(const struct gtTri2D_t *tri)
 {
     double x0, y0, x1, y1, x2, y2;
+    double area1, area2;
     
     assert(tri != NULL);
     
@@ -43,7 +44,11 @@ double gtTri2D_area(const struct gtTri2D_t *tri)
     x2 = tri->p2.x;
     y2 = tri->p2.y;
 
-    return (x1 * y2 + y0 * x2 + x0 * y1) - (x1 * y0 - y1 * x2 - x0 * y2);
+    area1 = 0.5 * ((x1 * y2 + y0 * x2 + x0 * y1) - (x1 * y0 - y1 * x2 - x0 * y2));
+    area2 = 0.5 * (((x1 - x0) * (y2 - y0)) - ((x2 - x0) * (y1 - y0)));
+    assert(fabs(area1 - area2) < 1.e-10);
+    
+    return area1;
 }
 
 // ------------------------------------------------------------------------------------------
