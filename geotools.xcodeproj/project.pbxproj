@@ -13,6 +13,8 @@
 		55111F7022DC7CA300C3EA7B /* gtPoint2D.c in Sources */ = {isa = PBXBuildFile; fileRef = 55111F6E22DC7CA300C3EA7B /* gtPoint2D.c */; };
 		55111F7722DC7FBD00C3EA7B /* gtVec2D.h in Headers */ = {isa = PBXBuildFile; fileRef = 55111F7522DC7FBD00C3EA7B /* gtVec2D.h */; };
 		55111F7822DC7FBD00C3EA7B /* gtVec2D.c in Sources */ = {isa = PBXBuildFile; fileRef = 55111F7622DC7FBD00C3EA7B /* gtVec2D.c */; };
+		55111F7C22DCB8FC00C3EA7B /* gtTri2D.h in Headers */ = {isa = PBXBuildFile; fileRef = 55111F7A22DCB8FC00C3EA7B /* gtTri2D.h */; };
+		55111F7D22DCB8FC00C3EA7B /* gtTri2D.c in Sources */ = {isa = PBXBuildFile; fileRef = 55111F7B22DCB8FC00C3EA7B /* gtTri2D.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,9 @@
 		55111F7522DC7FBD00C3EA7B /* gtVec2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gtVec2D.h; sourceTree = "<group>"; };
 		55111F7622DC7FBD00C3EA7B /* gtVec2D.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gtVec2D.c; sourceTree = "<group>"; };
 		55111F7922DC831E00C3EA7B /* gttypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gttypes.h; sourceTree = "<group>"; };
+		55111F7A22DCB8FC00C3EA7B /* gtTri2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gtTri2D.h; sourceTree = "<group>"; };
+		55111F7B22DCB8FC00C3EA7B /* gtTri2D.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gtTri2D.c; sourceTree = "<group>"; };
+		55111F7E22DCBCDA00C3EA7B /* gtTolerances.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gtTolerances.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,12 +78,15 @@
 			isa = PBXGroup;
 			children = (
 				55111F7322DC7EDA00C3EA7B /* gtEntities.h */,
+				55111F7E22DCBCDA00C3EA7B /* gtTolerances.h */,
 				55111F6D22DC7CA300C3EA7B /* gtPoint2D.h */,
 				55111F6E22DC7CA300C3EA7B /* gtPoint2D.c */,
 				55111F7522DC7FBD00C3EA7B /* gtVec2D.h */,
 				55111F7622DC7FBD00C3EA7B /* gtVec2D.c */,
 				55111F6822DC7BCF00C3EA7B /* gtLine2D.h */,
 				55111F6922DC7BCF00C3EA7B /* gtLine2D.c */,
+				55111F7A22DCB8FC00C3EA7B /* gtTri2D.h */,
+				55111F7B22DCB8FC00C3EA7B /* gtTri2D.c */,
 			);
 			name = entities;
 			sourceTree = "<group>";
@@ -93,6 +101,7 @@
 				55111F7722DC7FBD00C3EA7B /* gtVec2D.h in Headers */,
 				55111F6F22DC7CA300C3EA7B /* gtPoint2D.h in Headers */,
 				55111F6A22DC7BCF00C3EA7B /* gtLine2D.h in Headers */,
+				55111F7C22DCB8FC00C3EA7B /* gtTri2D.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +163,7 @@
 			files = (
 				55111F7822DC7FBD00C3EA7B /* gtVec2D.c in Sources */,
 				55111F6B22DC7BCF00C3EA7B /* gtLine2D.c in Sources */,
+				55111F7D22DCB8FC00C3EA7B /* gtTri2D.c in Sources */,
 				55111F7022DC7CA300C3EA7B /* gtPoint2D.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
