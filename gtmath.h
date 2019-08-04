@@ -13,8 +13,8 @@
 
 #include <math.h>
 
-#define gtsqrt sqrt
+#define gtmath_sqrt(x) sqrt((x))
+#define gtmath_acos(x) acos((x))
 
-double gtsqrt_dot_product_2d(double Ux, double Uy, double Vx, double Vy);
 
 #endif /* gtmath_h */

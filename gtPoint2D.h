@@ -22,6 +22,10 @@ DLL_GEOTOOLS struct gtPoint2D_t gtPoint2D_make(double x, double y);
 
 DLL_GEOTOOLS struct gtPoint2D_t gtPoint2D_copy(const struct gtPoint2D_t *p);
 
-DLL_GEOTOOLS double gtPoint2D_distance_to_point(const struct gtPoint2D_t *p1, const struct gtPoint2D_t *p2);
+
+DLL_GEOTOOLS double gtPoint2D_distance_from_p1_to_p2(const struct gtPoint2D_t *p1, const struct gtPoint2D_t *p2);
+
+DLL_GEOTOOLS void gtPoint2D_move(struct gtPoint2D_t *p, double dx, double dy);
+
 
 #endif /* gtPoint2D_h */

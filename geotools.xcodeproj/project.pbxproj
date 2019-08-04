@@ -79,6 +79,14 @@
 			children = (
 				55111F7322DC7EDA00C3EA7B /* gtEntities.h */,
 				55111F7E22DCBCDA00C3EA7B /* gtTolerances.h */,
+				557819CC22F7303500C5F22A /* 2D Entities */,
+			);
+			name = entities;
+			sourceTree = "<group>";
+		};
+		557819CC22F7303500C5F22A /* 2D Entities */ = {
+			isa = PBXGroup;
+			children = (
 				55111F6D22DC7CA300C3EA7B /* gtPoint2D.h */,
 				55111F6E22DC7CA300C3EA7B /* gtPoint2D.c */,
 				55111F7522DC7FBD00C3EA7B /* gtVec2D.h */,
@@ -88,7 +96,7 @@
 				55111F7A22DCB8FC00C3EA7B /* gtTri2D.h */,
 				55111F7B22DCB8FC00C3EA7B /* gtTri2D.c */,
 			);
-			name = entities;
+			name = "2D Entities";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

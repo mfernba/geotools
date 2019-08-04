@@ -66,7 +66,7 @@ struct gtVec2D_t gtVec2D_copy(const struct gtVec2D_t *vector)
 double gtVec2D_length(const struct gtVec2D_t *vector)
 {
     assert(vector != NULL);
-    return gtsqrt(vector->Ux * vector->Ux + vector->Uy * vector->Uy);
+    return gtmath_sqrt(vector->Ux * vector->Ux + vector->Uy * vector->Uy);
 }
 
 // ------------------------------------------------------------------------------------------
@@ -84,10 +84,60 @@ void gtVec2D_make_unit(struct gtVec2D_t *vector)
 
 // ------------------------------------------------------------------------------------------
 
+void gtVec2D_add_vector1_to_vector2(const struct gtVec2D_t *vector1, struct gtVec2D_t *vector2)
+{
+    assert(vector1 != NULL);
+    assert(vector2 != NULL);
+    
+    vector2->Ux += vector1->Ux;
+    vector2->Uy += vector1->Uy;
+}
+
+// ------------------------------------------------------------------------------------------
+
+void gtVec2D_substract_vector1_to_vector2(const struct gtVec2D_t *vector1, struct gtVec2D_t *vector2)
+{
+    assert(vector1 != NULL);
+    assert(vector2 != NULL);
+    
+    vector2->Ux -= vector1->Ux;
+    vector2->Uy -= vector1->Uy;
+}
+
+// ------------------------------------------------------------------------------------------
+
+void gtVec2D_scale(struct gtVec2D_t *vector, double scale_factor)
+{
+    assert(vector != NULL);
+    
+    vector->Ux *= scale_factor;
+    vector->Uy *= scale_factor;
+}
+
+// ------------------------------------------------------------------------------------------
+
 double gtVec2D_dot_product(const struct gtVec2D_t *vector1, const struct gtVec2D_t *vector2)
 {
     assert(vector1 != NULL);
     assert(vector2 != NULL);
     
     return vector1->Ux * vector2->Ux + vector1->Uy * vector2->Uy;
+}
+
+// ------------------------------------------------------------------------------------------
+
+double gtVec2D_angle_between_vectors(const struct gtVec2D_t *vector1, struct gtVec2D_t *vector2)
+{
+    double dot;
+    
+    dot = gtVec2D_dot_product(vector1, vector2);
+    return gtmath_acos(dot);
+}
+
+// ------------------------------------------------------------------------------------------
+
+void gtVec2D_move_point(const struct gtVec2D_t *vector, struct gtPoint2D_t *point, double distance_along_vector)
+{
+    assert(vector != NULL);
+    gtPoint2D_move(point, vector->Ux * distance_along_vector, vector->Uy * distance_along_vector);
 }

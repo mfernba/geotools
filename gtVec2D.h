@@ -31,8 +31,16 @@ DLL_GEOTOOLS double gtVec2D_length(const struct gtVec2D_t *vector);
 
 DLL_GEOTOOLS void gtVec2D_make_unit(struct gtVec2D_t *vector);
 
+
+DLL_GEOTOOLS void gtVec2D_add_vector1_to_vector2(const struct gtVec2D_t *vector1, struct gtVec2D_t *vector2);
+
+DLL_GEOTOOLS void gtVec2D_substract_vector1_to_vector2(const struct gtVec2D_t *vector1, struct gtVec2D_t *vector2);
+
+DLL_GEOTOOLS void gtVec2D_scale(struct gtVec2D_t *vector, double scale_factor);
+
 DLL_GEOTOOLS double gtVec2D_dot_product(const struct gtVec2D_t *vector1, const struct gtVec2D_t *vector2);
 
+DLL_GEOTOOLS void gtVec2D_move_point(const struct gtVec2D_t *vector, struct gtPoint2D_t *point, double distance_along_vector);
 
 
 #endif /* gtVec2D_h */
